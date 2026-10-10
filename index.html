@@ -14,23 +14,23 @@
   <meta name="geo.region" content="IN-PB">
   <meta name="geo.placename" content="Zirakpur, Punjab">
 
-  <!-- Open Graph / Facebook / WhatsApp Sharing Meta Tags -->
+  <!-- Open Graph / Social Sharing Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thekidsvatika.github.io/">
   <meta property="og:title" content="Kids Vatika Smart School | Viksit Bharat Educational & Welfare Trust">
   <meta property="og:description" content="Dedicated education NGO in Zirakpur empowering underprivileged students with free and accessible primary education up to 5th grade. Padhega India, Tabhi Badhega India.">
-  <meta property="og:image" content="logo.png">
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1e_-O1GDitKAyoES_hF_5La0P3z1MLsn7&sz=w1000">
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kids Vatika Smart School | Education NGO in Zirakpur">
   <meta name="twitter:description" content="Free education, uniforms, and books for underprivileged children by Viksit Bharat Educational & Welfare Trust in Zirakpur, Punjab.">
-  <meta name="twitter:image" content="logo.png">
+  <meta name="twitter:image" content="https://drive.google.com/thumbnail?id=1e_-O1GDitKAyoES_hF_5La0P3z1MLsn7&sz=w1000">
 
-  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1e_-O1GDitKAyoES_hF_5La0P3z1MLsn7&sz=w500">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Structured Data / Local Business Schema for Search Engines -->
+  <!-- Structured Data / Local Business Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,7 +39,8 @@
     "alternateName": "Kids Vatika Smart School",
     "description": "An education trust and NGO in Zirakpur providing free and subsidized schooling to underprivileged and minority communities.",
     "url": "https://thekidsvatika.github.io/",
-    "logo": "logo.png",
+    "logo": "https://drive.google.com/thumbnail?id=1e_-O1GDitKAyoES_hF_5La0P3z1MLsn7&sz=w1000",
+    "telephone": "+91-8699188393",
     "email": "thekidsvatika@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -49,6 +50,14 @@
       "postalCode": "140604",
       "addressCountry": "IN"
     },
+    "sameAs": [
+      "https://www.instagram.com/kids.vatikaschool/",
+      "https://www.facebook.com/kidsvatikaschool",
+      "https://www.pinterest.com/kidsvatikachool",
+      "https://www.reddit.com/user/kidsvatikaofficial/",
+      "https://www.tumblr.com/kidsvatikaschool",
+      "https://twitter.com/thekidsvatika"
+    ],
     "areaServed": "Zirakpur, Punjab, India",
     "nonprofitStatus": "Nonprofit501c3"
   }
@@ -61,6 +70,7 @@
       --dark-blue: #000080;
       --light-bg: #f8fafc;
       --text: #333333;
+      --whatsapp-green: #25d366;
     }
     * {
       margin: 0;
@@ -250,15 +260,100 @@
     .submit-btn:hover {
       background: var(--primary);
     }
+    
+    /* WhatsApp Styles */
+    .whatsapp-direct-box {
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--whatsapp-green);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(37, 211, 102, 0.4);
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--whatsapp-green);
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 9999;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+    .whatsapp-float svg, .whatsapp-btn svg {
+      fill: currentColor;
+    }
+
+    /* Social Media Section */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.3s;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px);
+      background: var(--primary);
+    }
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
     footer {
       background: #111827;
       color: #9ca3af;
       text-align: center;
-      padding: 2rem 1.5rem;
+      padding: 3rem 1.5rem 2rem;
       margin-top: 3rem;
     }
     footer p {
       margin-bottom: 0.5rem;
+    }
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -267,7 +362,8 @@
   <header>
     <div class="nav-container">
       <div class="brand-container">
-        <img src="logo.png" alt="Kids Vatika Smart School Logo - Viksit Bharat Trust" class="brand-logo">
+        <!-- Direct Google Drive image link -->
+        <img src="https://drive.google.com/thumbnail?id=1e_-O1GDitKAyoES_hF_5La0P3z1MLsn7&sz=w500" alt="Kids Vatika Smart School Logo - Viksit Bharat Trust" class="brand-logo">
         <div class="logo-area">
           <h1>Kids Vatika Smart School</h1>
           <p>Under Viksit Bharat Educational & Welfare Trust</p>
@@ -283,7 +379,8 @@
   </header>
 
   <section class="hero">
-    <img src="logo.png" alt="Viksit Bharat Trust Logo" class="hero-logo">
+    <!-- Direct Google Drive image link -->
+    <img src="https://drive.google.com/thumbnail?id=1e_-O1GDitKAyoES_hF_5La0P3z1MLsn7&sz=w500" alt="Viksit Bharat Trust Logo" class="hero-logo">
     <h2>Har Bachhe Ka Adhikar: Gunwatta Shiksha</h2>
     <p>Under-privileged aur minority community ke bachho ke liye Class 5th tak standard education, free uniforms aur study materials[cite: 7].</p>
     <div class="slogan-badge">"Padhega India, Tabhi Badhega India"</div>
@@ -346,14 +443,17 @@
       <h2>Contact Us</h2>
     </div>
     <div class="contact-form">
-      <form action="https://formspree.io/f/thekidsvatika@gmail.com" method="POST">
+      <!-- Web3Forms: Yahan apni Access Key enter karein -->
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        
         <div class="form-group">
           <label>Aapka Naam</label>
           <input type="text" name="name" required placeholder="Pura naam enter karein">
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" name="_replyto" required placeholder="Aapka email address">
+          <input type="email" name="email" required placeholder="Aapka email address">
         </div>
         <div class="form-group">
           <label>Mobile Number</label>
@@ -365,13 +465,18 @@
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
+
+      <!-- Direct WhatsApp Action Button -->
+      <div class="whatsapp-direct-box">
+        <p style="margin-bottom: 0.8rem; font-weight: 500; font-size: 0.95rem;">Turant Enquiry ke liye WhatsApp par direct chat karein:</p>
+        <a href="https://wa.me/918699188393?text=Hello%20Kids%20Vatika%20Smart%20School,%20mujhe%20admission%20aur%20trust%20ke%20baare%20me%20enquiry%20karni%20hai." target="_blank" class="whatsapp-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149 1.98 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Direct WhatsApp Chat (+91 86991 88393)
+        </a>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2026 Kids Vatika Smart School. All Rights Reserved.</p>
-    <p>Run by Viksit Bharat Educational & Welfare Trust[cite: 4, 7] | Registered Education NGO in Zirakpur, Punjab[cite: 4]</p>
-  </footer>
-
-</body>
-</html>
+  <!-- Floating Sticky WhatsApp Button -->
+  <a href="https://wa.me/918699188393?text=Hello%20Kids%20Vatika%20Smart%20School,%20mujhe%20admission%20aur%20trust%20ke%20baare%20me%20enquiry%20karni%20hai." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <svg width="34" height="34" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.0
